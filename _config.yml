@@ -1,0 +1,16 @@
+url: "https://philipzastrow.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "Philip Zastrow" # the name of your site, e.g. ACME Corp.
+exclude: ["Gemfile", "Gemfile.lock"]
+encoding: "utf-8"
+
+assets:
+  compress:
+    css:  sass
+  autoprefixer:
+    browsers:
+      - "last 5 versions"
+      - "IE > 9"
+  plugins:
+    css: { autoprefixer: {}}
+  

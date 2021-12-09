@@ -1,0 +1,57 @@
+@font-face {
+  font-family: Baskerville;
+  src: url('/assets/LibreBaskerville.ttf') format('truetype');
+  font-weight: 400 600;
+}
+
+:root {
+  --bg: hsl(0, 0%, 100%);
+  --text: hsl(210, 10%, 20%);
+  --link: hsl(210, 100%, 40%); 
+  --visited: hsl(310, 100%, 40%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: hsl(210, 10%, 10%);
+    --text: hsl(0, 0%, 100%);
+    --link: hsl(210, 100%, 60%); 
+    --visited: hsl(310, 100%, 60%);
+  }
+}
+
+body {
+  font: 450 clamp(1.125em, 2.5vw, 2.5em) / 1.5 Baskerville, serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+}
+
+a[href] {
+  text-decoration-color: var(--text);
+  text-decoration-thickness: 1px;
+  color: var(--link);
+}
+
+a[href]:hover {
+  text-decoration-thickness: 2px;
+  text-decoration-color: inherit;
+}
+
+a[href]:visited {
+  color: var(--visited);
+}
+
+.site-header,
+.site-main {
+  width: min(90%, 45ch);
+  margin: 5vh auto;
+}
+
+h1 {
+  font: 600 1.75em / 1.25 Baskerville, serif;
+}
+
+ul {
+  list-style: outside "· ";
+}
